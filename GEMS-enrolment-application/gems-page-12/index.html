@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>GEMS Dashboard</title>
+</head>
+
+<body>
+  <!-------------- First row ------------------------->
+  <div class="row first-row">
+    <div class="col-md-2 col-sm-6">
+      <div class="top-left d-flex align-items-center">
+        <span class="logo">
+          <img src="../pics/logo.png" src="company-logo" /></span>
+        <span class="logo-down"><img src="../pics/logo-down-arrow.png" alt="down-arrow" /></span>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <img src="../pics/fries-menu.png" alt="menu-toggle" />
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="col-md-7 col-sm-2 search-col">
+      <img class="search" src="../pics/search.png" alt="search" />
+      <input type="text" class="search-form" placeholder="Search..." />
+    </div>
+
+    <div class="col-md-3 col-sm-4">
+      <div class="top-right">
+        <div class="notif">
+          <img src="../pics/notification.png" alt="notification" /><span class="bell-dot"></span>
+        </div>
+        <div class="user-image">
+          <img src="../pics/david.png" alt="david" />
+        </div>
+        <div class="user-name">
+          <span class="user">David Miller</span>
+          <span class="position">Admission Staff
+            <span><img src="../pics/david-down-arrow.png" alt="down-arrow" /></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------------- Second row ------------------------->
+  <div class="row second-row">
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <ul class="sidebar-menu">
+          <li class="no-children">
+            <a href="#">
+              <img class="image-icons" src="../pics/dasboard.png" alt="dasboard" />
+              <span class="item-name">Dashboard</span>
+            </a>
+          </li>
+          <li class="no-children">
+            <a href="#">
+              <span id="icon-active">
+                <img class="image-icons" src="../pics/enquiries.png" alt="enquiries" />
+              </span>
+
+              <span class="item-name">Enquiries</span>
+            </a>
+          </li>
+          <li class="no-children">
+            <a href="#" id="sidebarCollapse2">
+              <span id="icon-active">
+              <img class="image-icons" src="../pics/enrollment.png" alt="enrollment" />
+              </span>
+              <span class="item-name">Enrollment</span>
+            </a>
+          </li>
+          <li class="no-children">
+            <a href="#">
+              <img class="image-icons" src="../pics/admission.png" alt="admission" />
+              <span class="item-name">Admission</span>
+            </a>
+          </li>
+          <li class="no-children">
+            <a href="#">
+              <img class="image-icons" src="../pics/settings.png" alt="settings" />
+              <span class="item-name">Settings</span>
+            </a>
+          </li>
+          <li class="no-children">
+            <a href="#">
+              <img class="image-icons" src="../pics/help.png" alt="help" />
+              <span class="item-name">Help</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="sidebar2" class="toggled">
+        <h2 class="management">Manage Enrollment</h2>
+        <ul class="sidebar-menu">
+          <li class="no-children">
+            <a href="#">
+              <span class="item-name">Enrollment Application Form</span>
+            </a>
+          </li>
+          <li class="no-children">
+            <a href="#">
+              <span class="item-name">Enrollment Application Stage</span>
+            </a>
+          </li>
+        
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="mb-3 dashboard-enquiry">
+              Dashboard / Enrollment Application Form
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <h3 class="mb-3 dashboard-heading">
+              Enrollment Application Form
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12"></div>
+        </div>
+        <!-- 000000000000000000000000000000000000000000000000000000000 -->
+        <div class="row progress-row">
+          <div class="card colored">
+            <span class="round-1"><i class="fa fa-file-text-o card-img-left"></i></span>
+            <div class="card-body">
+              <p class="card-title">Basic Details</p>
+            </div>
+          </div>
+
+          <div class="card colored2">
+            <hr />
+            <span class="round-1"><img src="../pics/additional-detail.png" class="card-img-left" /></span>
+            <div class="card-body">
+              <p class="card-title">Additional Details</p>
+
+            </div>
+          </div>
+          <div class="card colored3">
+            <hr class="dashed" />
+            <span class="round-1"><img src="../pics/documents.png" class="card-img-left" /></span>
+            <div class="card-body">
+              <p class="card-title">Documents</p>
+            </div>
+          </div>
+          <div class="card colored3">
+            <hr class="solid" />
+            <span class="round-1"><img src="../pics/application-fee-details.png" class="card-img-left" /></span></span>
+            <div class="card-body">
+              <p class="card-title">Application Fee Details</p>
+
+            </div>
+          </div>
+        </div>
+        <!-- 000000000000000000000000000000000000000000000000000000000 -->
+        <div class="row main-row">
+          <div class="col">
+            <div class="row additional-details-row">
+              <div class="col-md-6 p-0">
+                <h3>Additional Details</h3>
+              </div>
+              <div class="col-md-6 p-0 back-skip">
+                <button class="first"><a href="#"><i class="fa fa-undo"></i>Back to Applicant Additional
+                    Details</a></button>
+                <button class="last"><a href="#"><i class="fa fa-sign-out"></i>Skip & Go to Declaration
+                    Section</a></button>
+              </div>
+            </div>
+            <div class="row subjects">
+              <div class="col">
+                <h3>Subjects your child is interested in</h3>
+              </div>
+            </div>
+            <div class="row button-row-1">
+              <div class="col">
+                <input type="checkbox" id="cb1" hidden class="cb-btn"><label class="btn" for="cb1">Sports</label>
+
+                <input type="checkbox" id="cb2" hidden class="cb-btn"><label class="btn" for="cb2">Maths</label>
+
+                <input type="checkbox" id="cb3" hidden class="cb-btn"><label class="btn" for="cb3">Science</label>
+
+                <input type="checkbox" id="cb4" hidden class="cb-btn"><label class="btn" for="cb4">Art</label>
+
+                <input type="checkbox" id="cb5" hidden class="cb-btn"><label class="btn" for="cb5">Drama</label>
+
+                <input type="checkbox" id="cb6" hidden class="cb-btn"><label class="btn" for="cb6">Reading</label>
+
+                <input type="checkbox" id="cb7" hidden class="cb-btn"><label class="btn" for="cb7">Writing</label>
+
+                <input type="checkbox" id="cb8" hidden class="cb-btn"><label class="btn" for="cb8">Cooking</label>
+
+                <input type="checkbox" id="cb9" hidden class="cb-btn"><label class="btn" for="cb9">Gaming</label>
+
+                <input type="checkbox" id="cb10" hidden class="cb-btn"><label class="btn" for="cb10">Computing</label>
+
+                <input type="checkbox" id="cb11" hidden class="cb-btn"><label class="btn" for="cb11">Business</label>
+
+                <input type="checkbox" id="cb312" hidden class="cb-btn"><label class="btn" for="cb312">Music</label>
+
+                <input type="checkbox" id="cb13" hidden class="cb-btn"><label class="btn" for="cb13">Yoga</label>
+
+                <input type="checkbox" id="cb14" hidden class="cb-btn"><label class="btn" for="cb14">Health</label>
+
+                <input type="checkbox" id="cb15" hidden class="cb-btn"><label class="btn" for="cb15">Fashion</label>
+              </div>
+            </div>
+            <hr>
+            <div class="row subjects">
+              <div class="col">
+                <h3>Activities your child is interested in</h3>
+              </div>
+            </div>
+            <div class="row button-row-2">
+              <div class="col">
+                <input type="checkbox" id="cb16" hidden class="cb-btn"><label class="btn" for="cb16"><img
+                    src="../pics/music.png" alt="music">Music Creative & Performing Art</label>
+                <input type="checkbox" id="cb17" hidden class="cb-btn"><label class="btn" for="cb17"><img
+                    src="../pics/language-culture.png" alt="language-culture">Language & Culture</label>
+                <input type="checkbox" id="cb18" hidden class="cb-btn"><label class="btn" for="cb18"><img
+                    src="../pics/science-digital.png" alt="science-digital">Science & Digital
+                  Technology</label>
+                <input type="checkbox" id="cb19" hidden class="cb-btn"><label class="btn" for="cb19"><img
+                    src="../pics/leadership.png" alt="leadership">Skills & Leadership</label>
+                <input type="checkbox" id="cb20" hidden class="cb-btn"><label class="btn" for="cb20"><img
+                    src="../pics/enhanced-learning.png" alt="enhanced-learning">Enhanced Learning</label>
+                <input type="checkbox" id="cb21" hidden class="cb-btn"><label class="btn" for="cb21"><img
+                    src="../pics/sports.png" alt="sports">Sports & Adventure</label>
+              </div>
+            </div>
+            <hr>
+            <div class="row subjects">
+              <div class="col">
+                <h3>Sports your child is interested in</h3>
+              </div>
+            </div>
+            <div class="row button-row-3">
+              <div class="col">
+                <input type="checkbox" id="cb22" hidden class="cb-btn"><label class="btn" for="cb22">Athletics</label>
+                <input type="checkbox" id="cb23" hidden class="cb-btn"><label class="btn" for="cb23">Badminton</label>
+                <input type="checkbox" id="cb24" hidden class="cb-btn"><label class="btn" for="cb24">Basketball</label>
+                <input type="checkbox" id="cb25" hidden class="cb-btn"><label class="btn" for="cb25">Capoeira</label>
+                <input type="checkbox" id="cb26" hidden class="cb-btn"><label class="btn" for="cb26">Chess</label>
+                <input type="checkbox" id="cb27" hidden class="cb-btn"><label class="btn" for="cb27">Cricket</label>
+                <input type="checkbox" id="cb28" hidden class="cb-btn"><label class="btn" for="cb28">Dance</label>
+                <input type="checkbox" id="cb29" hidden class="cb-btn"><label class="btn" for="cb29">Football</label>
+                <input type="checkbox" id="cb30" hidden class="cb-btn"><label class="btn" for="cb30">Martial
+                  Arts</label>
+                <input type="checkbox" id="cb31" hidden class="cb-btn"><label class="btn" for="cb31">Swimming</label>
+                <input type="checkbox" id="cb32" hidden class="cb-btn"><label class="btn" for="cb32">Tennis</label>
+                <input type="checkbox" id="cb33" hidden class="cb-btn"><label class="btn" for="cb33">Yoga</label>
+                <input type="checkbox" id="cb34" hidden class="cb-btn"><label class="btn" for="cb34">Other</label>
+              </div>
+            </div>
+            <hr>
+            <div class="row subjects">
+              <div class="col">
+                <h3>As a parent, what is important to you when selecting a school?</h3>
+              </div>
+            </div>
+            <div class="row button-row-4">
+              <div class="col">
+                <input type="checkbox" id="cb35" hidden class="cb-btn"><label class="btn" for="cb35">Inspections and
+                  accreditations</label>
+                <input type="checkbox" id="cb36" hidden class="cb-btn"><label class="btn" for="cb36">Academic
+                  Results</label>
+                <input type="checkbox" id="cb37" hidden class="cb-btn"><label class="btn" for="cb37">Facilities</label>
+                <input type="checkbox" id="cb38" hidden class="cb-btn"><label class="btn" for="cb38">Online
+                  learning</label>
+                <input type="checkbox" id="cb39" hidden class="cb-btn"><label class="btn" for="cb39">School
+                  culture</label>
+                <input type="checkbox" id="cb40" hidden class="cb-btn"><label class="btn" for="cb40">Health and
+                  safety</label>
+                <input type="checkbox" id="cb41" hidden class="cb-btn"><label class="btn" for="cb41">Student
+                  voice</label>
+                <input type="checkbox" id="cb42" hidden class="cb-btn"><label class="btn" for="cb42">Preparing students
+                  for life after school</label>
+                <input type="checkbox" id="cb43" hidden class="cb-btn"><label class="btn" for="cb43">Others</label>
+              </div>
+            </div>
+            <hr>
+            <div class="row subjects">
+              <div class="col">
+                <h3>Declaration</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1 checkbox-col"><input type="checkbox"></div>
+              <div class="col-11 declaration">
+                <p>I declare that the information given above is to the best of my knowledge, true and correct. It may
+                  be stored and used in accordance with XXXX registration and selection procedures. I understand that
+                  giving flase information will disqualify my application.
+                <p> Ticking the declaration box (as substitute for your signature) is to confirm that you agree to the
+                  above declaration.</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row button-row-5">
+              <div class="col button-col">
+                <button class="cancel">
+                  Cancel
+                </button>
+                <button class="save">
+                  Save as Draft
+                </button>
+                <button class="continue">
+                  Continue to Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="row footer-row">
+            © 2021. <span>GEMS.</span> All Rights Reserved.
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

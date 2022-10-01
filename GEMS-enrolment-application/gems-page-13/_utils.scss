@@ -1,0 +1,32 @@
+// mixin
+@mixin progress-property {
+  font-size: $font-12;
+  font-weight: 400;
+  margin: 0 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+@mixin button-property {
+  color: $color-1;
+  background-color: transparent;
+  border-color: transparent;
+}
+@mixin card-property($bgcolor, $borderradius) {
+  flex-direction: row;
+  background: $bgcolor;
+  border: none;
+  border-radius: $borderradius;
+}
+@mixin round-property($bgcolor2) {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  margin: 10px 0 10px 30px;
+  background: $bgcolor2;
+}
+@mixin card-title-property {
+  font-size: $font-14;
+  color: $color-15;
+  font-weight: 500;
+  margin: 0;
+}

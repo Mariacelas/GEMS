@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>GEMS Dashboard</title>
+  </head>
+
+  <body>
+    <!-------------- First row ------------------------->
+    <div class="row first-row">
+      <div class="col-md-2 col-sm-6">
+        <div class="top-left d-flex align-items-center">
+          <span class="logo">
+            <img src="../pics/logo.png" src="company-logo"
+          /></span>
+          <span class="logo-down"
+            ><img src="../pics/logo-down-arrow.png" alt="down-arrow"
+          /></span>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <img src="../pics/fries-menu.png" alt="menu-toggle" />
+            </button>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-2 search-col">
+        <img class="search" src="../pics/search.png" alt="search" />
+        <input type="text" class="search-form" placeholder="Search..." />
+      </div>
+
+      <div class="col-md-3 col-sm-4">
+        <div class="top-right">
+          <div class="notif">
+            <img src="../pics/notification.png" alt="notification" /><span
+              class="bell-dot"
+            ></span>
+          </div>
+          <div class="user-image">
+            <img src="../pics/david.png" alt="david" />
+          </div>
+          <div class="user-name">
+            <span class="user">David Miller</span>
+            <span class="position"
+              >Admission Staff
+              <span
+                ><img src="../pics/david-down-arrow.png" alt="down-arrow"
+              /></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------- Second row ------------------------->
+    <div class="row second-row">
+      <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/dasboard.png"
+                  alt="dasboard"
+                />
+                <span class="item-name">Dashboard</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#" id="sidebarCollapse2">
+                <span id="icon-active">
+                  <img
+                    class="image-icons"
+                    src="../pics/enquiries.png"
+                    alt="enquiries"
+                  />
+                </span>
+
+                <span class="item-name">Enquiries</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enrollment.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Enrollment</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/admission.png"
+                  alt="admission"
+                />
+                <span class="item-name">Admission</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/settings.png"
+                  alt="settings"
+                />
+                <span class="item-name">Settings</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img class="image-icons" src="../pics/help.png" alt="help" />
+                <span class="item-name">Help</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav id="sidebar2" class="toggled">
+          <h2 class="management">Enquiries Management</h2>
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enquiry-list.png"
+                  alt="enquiries"
+                />
+                <span class="item-name">Enquiry List</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/feedback.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Manage Feedback</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/group.png"
+                  alt="admission"
+                />
+                <span class="item-name">Manage Groups</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-3 dashboard-enquiry">
+                Dashboard / Enrollment Application Form
+              </h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-3 dashboard-heading">
+                Enrollment Application Form
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+          <!-- 000000000000000000000000000000000000000000000000000000000 -->
+          <div class="row progress-row">
+            <div class="card colored">
+              <span class="round-1"
+                ><i class="fa fa-file-text-o card-img-left"></i></span>
+              <div class="card-body">
+                <p class="card-title">Basic Details</p>
+              </div>
+            </div>
+
+            <div class="card colored">
+              <hr />
+              <span class="round-1"
+                ><img src="../pics/additional-detail.png" class="card-img-left" /></span
+              >
+              <div class="card-body">
+                <p class="card-title">Additional Details</p>
+               
+              </div>
+            </div>
+            <div class="card colored2">
+              <hr />
+              <span class="round-1"
+                ><img
+                  src="../pics/documents.png"
+                  class="card-img-left" /></span>
+              <div class="card-body">
+                <p class="card-title">Documents</p>
+              </div>
+            </div>
+            <div class="card colored3">
+              <hr class="dashed" />
+              <span class="round-1"
+                ><img src="../pics/application-fee-details.png" class="card-img-left" /></span
+              ></span>
+              <div class="card-body">
+                <p class="card-title">Application Fee Details</p>
+    
+              </div>
+            </div>
+          </div>
+          <!-- 000000000000000000000000000000000000000000000000000000000 -->
+          <div class="row main-row">
+            <div class="col">
+                <div class="row additional-details-row">
+                    <div class="col-md-6 p-0">
+                        <h3>Additional Details</h3>
+                    </div>
+                </div>
+                <div class="row great-job">
+                    <div class="col">
+                        <h4>Greate Job..Almost There…</h4>
+                    </div>
+                </div>
+                <div class="row great-job-p">
+                  <div class="col">
+                      <p>Thank you for completing your registration. Please complete the sections below, including the declaration and final submission. Note, at minimum an applicant’s recent school/nursery reports and passport copy are required before an application can be processed</p>
+                  </div>
+              </div>
+              <div class="row blue-note">
+                <div class="col">
+                 <img src="../pics/note.png" alt="note">
+                 <span> Uploading scanned copies of passports, national ID and school reports will allow us to process your application quickly</span>
+                
+                </div>
+              </div>
+              <div class="row upload-row">
+                <div class="col">
+                  <label for="">Upload Documents (optional)</label>
+                </div>
+              </div>
+              <div class="drag-area">
+                <div class="icon">
+                  <img
+                    src="../pics/file-upload.png"
+                    alt="file-upload"
+                  />
+                </div>
+                <button>
+                  Choose a file<span>or drag it here.</span>
+                </button>
+
+                <input type="file" hidden />
+              </div>
+              <div class="row documents-list">
+                <div class="col-6 p-0">
+                  <ul>
+                    <li>A letter of employment from the child Sponsor’s workplace</li>
+                    <li>Applicant’s Birth Certificate</li>
+                    <li>Applicant’s Emirates ID/Qatar ID (backside) </li>
+                    <li> Applicant’s Emirates ID/Qatar ID (Frontside) </li>
+                    <li>Applicant’s Immunization records</li>
+                    <li>Applicant’s Passport</li>
+                    <li>Applicant’s Photo</li>
+                    <li>Applicant’s Recent School/Nursery Report (at least 2 years is applicable)</li>
+                  </ul>
+                  
+                </div>
+                <div class="col-6 p-0">
+                  <ul>
+                    <li>Applicant’s Visa</li>
+                    <li>Attached Medical Consent Form</li>
+                    <li>Parent (Sponsor) Passport </li>
+                    <li>Parent (Sponsor) Visa</li>
+                    <li>Previous School Report Card</li>
+                    <li>Sponsor’s Emirates ID/Qatar ID (Both Sides)</li>
+                    <li>Transfer Certificates (if applicable)</li>
+                    <li>Other documents (if any)</li>
+                  </ul>
+                </div>
+              </div>
+                <hr>
+                <div class="row button-row">
+                    <div class="col button-col">
+                        <button class="cancel">
+                            Cancel
+                        </button>
+                        <button class="save">
+                            Save as Draft
+                        </button>
+                        <button class="continue">
+                            Continue to Next
+                        </button>
+                    </div>
+                </div>
+              
+            </div>
+          </div>
+          <footer>
+            <div class="row footer-row">
+              © 2021. <span>GEMS.</span> All Rights Reserved.
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="choose-file.js"></script>
+  </body>
+</html>
