@@ -1,0 +1,24 @@
+// mixin
+@mixin ring-property {
+  border-radius: 50%;
+  display: flex;
+}
+
+@mixin vertical-line-property {
+  height: 58px;
+  position: absolute;
+  left: 49px;
+}
+
+@mixin progress-property {
+  font-size: $font-12;
+  font-weight: 400;
+  margin: 0 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+@mixin button-property {
+  color: $color-1;
+  background-color: transparent;
+  border-color: transparent;
+}

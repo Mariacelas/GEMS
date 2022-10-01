@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GEMS Dashboard</title>
+  </head>
+  <body>
+    <!-------------- First row ------------------------->
+    <div class="row first-row">
+      <div class="col-md-2 col-sm-6">
+        <div class="top-left d-flex align-items-center">
+          <span class="logo">
+            <img src="../pics/logo.png" src="company-logo"
+          /></span>
+          <span class="logo-down"
+            ><img src="../pics/logo-down-arrow.png" alt="down-arrow"
+          /></span>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <img src="../pics/fries-menu.png" alt="menu-toggle" />
+            </button>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-2 search-col">
+        <img class="search" src="../pics/search.png" alt="search" />
+        <input type="text" class="search-form" placeholder="Search..." />
+      </div>
+
+      <div class="col-md-3 col-sm-4">
+        <div class="top-right">
+          <div class="notif">
+            <img src="../pics/notification.png" alt="notification" /><span
+              class="bell-dot"
+            ></span>
+          </div>
+          <div class="user-image">
+            <img src="../pics/david.png" alt="david" />
+          </div>
+          <div class="user-name">
+            <span class="user">David Miller</span>
+            <span class="position"
+              >Admission Staff
+              <span
+                ><img src="../pics/david-down-arrow.png" alt="down-arrow"
+              /></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------- Second row ------------------------->
+    <div class="row second-row">
+      <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/dasboard.png"
+                  alt="dasboard"
+                />
+                <span class="item-name">Dashboard</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#" id="sidebarCollapse2">
+                <span id="icon-active">
+                  <img
+                    class="image-icons"
+                    src="../pics/enquiries.png"
+                    alt="enquiries"
+                  />
+                </span>
+
+                <span class="item-name">Enquiries</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enrollment.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Enrollment</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/admission.png"
+                  alt="admission"
+                />
+                <span class="item-name">Admission</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/settings.png"
+                  alt="settings"
+                />
+                <span class="item-name">Settings</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img class="image-icons" src="../pics/help.png" alt="help" />
+                <span class="item-name">Help</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav id="sidebar2" class="toggled">
+          <h2 class="management">Enquiries Management</h2>
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enquiry-list.png"
+                  alt="enquiries"
+                />
+                <span class="item-name">Enquiry List</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/feedback.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Manage Feedback</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/group.png"
+                  alt="admission"
+                />
+                <span class="item-name">Manage Groups</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+          <h3 class="mb-3 dashboard-enquiry">Dashboard / Enquiry List</h3>
+          <div class="row">
+            <div class="col-md-8 col-sm-6">
+              <h3 class="mb-3 dashboard-heading">Enquiry List</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 login">
+              <button class="login-desc">
+                <img src="../pics/add.png" alt="add" />Create Enquiry
+              </button>
+            </div>
+          </div>
+          <div class="row main-table-row">
+            <div class="col-md-12">
+              <div class="row bg-white">
+                <div class="col table-coloumn">
+                  <!-- Nav tabs -->
+                  <div class="row nav-tab-row">
+                    <ul class="nav nav-pills" role="tablist">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          data-toggle="pill"
+                          href="#first-active"
+                          >All <span class="number">135</span></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu1"
+                          >Open <span class="number">44</span></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu2"
+                          >Re-open<span class="number">23</span></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu3"
+                          >Assigned To Me<span class="number">56</span></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#menu4"
+                          >Closed<span class="number">12</span></a
+                        >
+                      </li>
+                    </ul>
+                    <span class="filter">
+                      <img src="../pics/filter.png" alt="filter" />
+                    </span>
+                  </div>
+
+                  <div class="tab-content">
+                    <div id="first-active" class="container tab-pane active">
+                      <div class="table-responsive">
+                        <table
+                          class="table bg-white align-middle enquiry-table"
+                        >
+                          <tr>
+                            <th>
+                              Enquiry ID
+                              <span class="up-down"
+                                ><img
+                                  src="../pics/up-down.png"
+                                  alt="up-down-arrow"
+                              /></span>
+                            </th>
+                            <th>
+                              Name
+                              <span class="up-down"
+                                ><img
+                                  src="../pics/up-down.png"
+                                  alt="up-down-arrow"
+                              /></span>
+                            </th>
+                            <th>Source</th>
+                            <th>Lead Status</th>
+                            <th>Follow up Status</th>
+                            <th>Assigned To</th>
+                          </tr>
+                          <tr class="data-row1">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Abdhul</td>
+                            <td class="detail">Online</td>
+                            <td class="followup3">
+                              <span>No Response</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/call.png"
+                                />Scheduled Today</span
+                              >
+                            </td>
+                            <td class="assigned">Jose Khel</td>
+                          </tr>
+                          <tr>
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Irshad</td>
+                            <td class="detail">Online</td>
+                            <td class="followup3">
+                              <span>Follow-up Inprogress</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/call.png"
+                                />Scheduled Today</span
+                              >
+                            </td>
+                            <td>David Hendry</td>
+                          </tr>
+                          <tr class="data-row1">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Alimullah</td>
+                            <td class="detail">Website</td>
+                            <td class="followup3">
+                              <span>No Response</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/warning.png"
+                                />Brochure not delivered</span
+                              >
+                            </td>
+                            <td class="assigned">Mary Josna</td>
+                          </tr>
+                          <tr class="inactive-row">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Abdhul</td>
+                            <td class="detail">Online</td>
+                            <td class="followup3">
+                              <span>Dead Lead</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Inactve</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/inactve.png"
+                                />Cancelled the appointment</span
+                              >
+                            </td>
+                            <td>Harsh Bhone</td>
+                          </tr>
+                          <tr>
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Irshad</td>
+                            <td class="detail">Online</td>
+                            <td class="followup3">
+                              <span>Follow-up Inprogress</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/call.png"
+                                />Scheduled Today</span
+                              >
+                            </td>
+                            <td>renny Kim</td>
+                          </tr>
+                          <tr class="data-row1">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Alimullah</td>
+                            <td class="detail">Website</td>
+                            <td class="followup3">
+                              <span>No Response</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/call.png"
+                                />Scheduled Today</span
+                              >
+                            </td>
+                            <td class="assigned">Me</td>
+                          </tr>
+                          <tr class="inactive-row">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Abdhul</td>
+                            <td class="detail">Online</td>
+                            <td class="followup3">
+                              <span>Dead Lead</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Inactve</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/inactve.png"
+                                />Cancelled the appointment</span
+                              >
+                            </td>
+                            <td>Zara Anna</td>
+                          </tr>
+                          <tr class="data-row2">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Irshad</td>
+                            <td class="detail">Online</td>
+                            <td class="followup3">
+                              <span>Interested to Enroll</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                            </td>
+                            <td>Mazita khen</td>
+                          </tr>
+                          <tr class="data-row3">
+                            <td class="id">EN0122072021</td>
+                            <td class="detail">Alimullah</td>
+                            <td class="detail">Website</td>
+                            <td class="followup3">
+                              <span>No Response</span>
+                            </td>
+                            <td class="status">
+                              <span class="dot1"></span
+                              ><span class="active">Active</span>
+                              <span class="today">
+                                <img
+                                  class="call"
+                                  src="../pics/call.png"
+                                />Scheduled Today</span
+                              >
+                            </td>
+                            <td class="assigned">Kenna Khel</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div
+                        class="row page-results d-flex justify-content-between"
+                      >
+                        <span class="result">Showing Records1-10 of 100</span>
+                        <div class="page-rightsec">
+                          <span class="items"
+                            ><img
+                              class="left"
+                              src="../pics/left-right.png"
+                              alt="left-arrow"
+                          /></span>
+                          <span class="square1">1</span>
+                          <span class="square2">2</span>
+                          <span class="square1">3</span>
+                          <span class="square1">4</span>
+                          <span class="square1">5</span>
+                          <span class="items"
+                            ><img
+                              class="right"
+                              src="../pics/left-right.png"
+                              alt="left-arrow"
+                          /></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="menu1" class="container tab-pane fade">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce porttitor leo nec ligula viverra, quis facilisis
+                      nunc vehicula. Maecenas purus orci, efficitur in dapibus
+                      vel, rutrum in massa. Sed auctor urna sit amet eros mattis
+                      interdum. Integer imperdiet ante in quam lacinia, a
+                      laoreet risus imperdiet. Ut a blandit elit, vitae volutpat
+                      nunc. Nam posuere urna sagittis lectus eleifend viverra.
+                      Quisque mauris nunc, viverra vitae sodales non, auctor in
+                      diam. Sed dignissim pulvinar sapien sed fermentum.
+                      Praesent interdum turpis ut neque tristique ornare. Nam
+                      dictum est sed sem elementum rutrum. Nam a mollis turpis.
+                      Vestibulum ante ipsum primis in faucibus orci luctus et
+                      ultrices posuere cubilia curae; Pellentesque habitant
+                      morbi tristique senectus et netus et malesuada fames ac
+                      turpis egestas. Aliquam tempus ac est convallis accumsan.
+                      Donec rhoncus condimentum leo nec cursus. Fusce a ornare
+                      nisl, id fermentum sem. Praesent pretium dui magna, in
+                      aliquam lectus tempor sed. Donec maximus lectus quis
+                      vehicula gravida. Proin odio nisi, aliquet ac ipsum quis,
+                      auctor semper leo. Curabitur vitae justo vel augue varius
+                      cursus non quis est. Nunc vulputate nunc nibh, sed tempus
+                      erat tincidunt eget. Duis a lacus at nulla porttitor
+                      tincidunt. Vestibulum euismod elementum mi ut tincidunt.
+                      Suspendisse tempus, mi et imperdiet maximus, est turpis
+                      placerat massa, at venenatis sem elit ut ex. Donec non
+                      aliquam odio. Curabitur ut leo vitae magna lobortis
+                      accumsan. Phasellus viverra eu leo non rhoncus.
+                      Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id
+                      arcu tempus, varius erat et, ornare libero. In quis felis
+                      nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem
+                      mattis. Cras non varius dui, quis commodo ante. Maecenas
+                      gravida est non nulla malesuada egestas. Proin tincidunt
+                      eros et lacus sodales lobortis.
+                    </div>
+                    <div id="menu2" class="container tab-pane fade">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce porttitor leo nec ligula viverra, quis facilisis
+                      nunc vehicula. Maecenas purus orci, efficitur in dapibus
+                      vel, rutrum in massa. Sed auctor urna sit amet eros mattis
+                      interdum. Integer imperdiet ante in quam lacinia, a
+                      laoreet risus imperdiet. Ut a blandit elit, vitae volutpat
+                      nunc. Nam posuere urna sagittis lectus eleifend viverra.
+                      Quisque mauris nunc, viverra vitae sodales non, auctor in
+                      diam. Sed dignissim pulvinar sapien sed fermentum.
+                      Praesent interdum turpis ut neque tristique ornare. Nam
+                      dictum est sed sem elementum rutrum. Nam a mollis turpis.
+                      Vestibulum ante ipsum primis in faucibus orci luctus et
+                      ultrices posuere cubilia curae; Pellentesque habitant
+                      morbi tristique senectus et netus et malesuada fames ac
+                      turpis egestas. Aliquam tempus ac est convallis accumsan.
+                      Donec rhoncus condimentum leo nec cursus. Fusce a ornare
+                      nisl, id fermentum sem. Praesent pretium dui magna, in
+                      aliquam lectus tempor sed. Donec maximus lectus quis
+                      vehicula gravida. Proin odio nisi, aliquet ac ipsum quis,
+                      auctor semper leo. Curabitur vitae justo vel augue varius
+                      cursus non quis est. Nunc vulputate nunc nibh, sed tempus
+                      erat tincidunt eget. Duis a lacus at nulla porttitor
+                      tincidunt. Vestibulum euismod elementum mi ut tincidunt.
+                      Suspendisse tempus, mi et imperdiet maximus, est turpis
+                      placerat massa, at venenatis sem elit ut ex. Donec non
+                      aliquam odio. Curabitur ut leo vitae magna lobortis
+                      accumsan. Phasellus viverra eu leo non rhoncus.
+                      Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id
+                      arcu tempus, varius erat et, ornare libero. In quis felis
+                      nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem
+                      mattis. Cras non varius dui, quis commodo ante. Maecenas
+                      gravida est non nulla malesuada egestas. Proin tincidunt
+                      eros et lacus sodales lobortis.
+                    </div>
+                    <div id="menu3" class="container tab-pane fade">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce porttitor leo nec ligula viverra, quis facilisis
+                      nunc vehicula. Maecenas purus orci, efficitur in dapibus
+                      vel, rutrum in massa. Sed auctor urna sit amet eros mattis
+                      interdum. Integer imperdiet ante in quam lacinia, a
+                      laoreet risus imperdiet. Ut a blandit elit, vitae volutpat
+                      nunc. Nam posuere urna sagittis lectus eleifend viverra.
+                      Quisque mauris nunc, viverra vitae sodales non, auctor in
+                      diam. Sed dignissim pulvinar sapien sed fermentum.
+                      Praesent interdum turpis ut neque tristique ornare. Nam
+                      dictum est sed sem elementum rutrum. Nam a mollis turpis.
+                      Vestibulum ante ipsum primis in faucibus orci luctus et
+                      ultrices posuere cubilia curae; Pellentesque habitant
+                      morbi tristique senectus et netus et malesuada fames ac
+                      turpis egestas. Aliquam tempus ac est convallis accumsan.
+                      Donec rhoncus condimentum leo nec cursus. Fusce a ornare
+                      nisl, id fermentum sem. Praesent pretium dui magna, in
+                      aliquam lectus tempor sed. Donec maximus lectus quis
+                      vehicula gravida. Proin odio nisi, aliquet ac ipsum quis,
+                      auctor semper leo. Curabitur vitae justo vel augue varius
+                      cursus non quis est. Nunc vulputate nunc nibh, sed tempus
+                      erat tincidunt eget. Duis a lacus at nulla porttitor
+                      tincidunt. Vestibulum euismod elementum mi ut tincidunt.
+                      Suspendisse tempus, mi et imperdiet maximus, est turpis
+                      placerat massa, at venenatis sem elit ut ex. Donec non
+                      aliquam odio. Curabitur ut leo vitae magna lobortis
+                      accumsan. Phasellus viverra eu leo non rhoncus.
+                      Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id
+                      arcu tempus, varius erat et, ornare libero. In quis felis
+                      nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem
+                      mattis. Cras non varius dui, quis commodo ante. Maecenas
+                      gravida est non nulla malesuada egestas. Proin tincidunt
+                      eros et lacus sodales lobortis.
+                    </div>
+                    <div id="menu4" class="container tab-pane fade">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Fusce porttitor leo nec ligula viverra, quis facilisis
+                      nunc vehicula. Maecenas purus orci, efficitur in dapibus
+                      vel, rutrum in massa. Sed auctor urna sit amet eros mattis
+                      interdum. Integer imperdiet ante in quam lacinia, a
+                      laoreet risus imperdiet. Ut a blandit elit, vitae volutpat
+                      nunc. Nam posuere urna sagittis lectus eleifend viverra.
+                      Quisque mauris nunc, viverra vitae sodales non, auctor in
+                      diam. Sed dignissim pulvinar sapien sed fermentum.
+                      Praesent interdum turpis ut neque tristique ornare. Nam
+                      dictum est sed sem elementum rutrum. Nam a mollis turpis.
+                      Vestibulum ante ipsum primis in faucibus orci luctus et
+                      ultrices posuere cubilia curae; Pellentesque habitant
+                      morbi tristique senectus et netus et malesuada fames ac
+                      turpis egestas. Aliquam tempus ac est convallis accumsan.
+                      Donec rhoncus condimentum leo nec cursus. Fusce a ornare
+                      nisl, id fermentum sem. Praesent pretium dui magna, in
+                      aliquam lectus tempor sed. Donec maximus lectus quis
+                      vehicula gravida. Proin odio nisi, aliquet ac ipsum quis,
+                      auctor semper leo. Curabitur vitae justo vel augue varius
+                      cursus non quis est. Nunc vulputate nunc nibh, sed tempus
+                      erat tincidunt eget. Duis a lacus at nulla porttitor
+                      tincidunt. Vestibulum euismod elementum mi ut tincidunt.
+                      Suspendisse tempus, mi et imperdiet maximus, est turpis
+                      placerat massa, at venenatis sem elit ut ex. Donec non
+                      aliquam odio. Curabitur ut leo vitae magna lobortis
+                      accumsan. Phasellus viverra eu leo non rhoncus.
+                      Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id
+                      arcu tempus, varius erat et, ornare libero. In quis felis
+                      nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem
+                      mattis. Cras non varius dui, quis commodo ante. Maecenas
+                      gravida est non nulla malesuada egestas. Proin tincidunt
+                      eros et lacus sodales lobortis.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <div class="row footer-row">
+              © 2021. <span>GEMS.</span> All Rights Reserved.
+            </div>
+          </footer>
+        </div>
+        <!-- <footer class="row bg-white footer-row">
+          <p class="copyright">© 2021. GEMS. All Rights Reserved.</p>
+        </footer> -->
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GEMS Dashboard</title>
+  </head>
+
+  <body>
+    <!-------------- First row ------------------------->
+    <div class="row first-row">
+      <div class="col-md-2 col-sm-6">
+        <div class="top-left d-flex align-items-center">
+          <span class="logo">
+            <img src="../pics/logo.png" src="company-logo"
+          /></span>
+          <span class="logo-down"
+            ><img src="../pics/logo-down-arrow.png" alt="down-arrow"
+          /></span>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <img src="../pics/fries-menu.png" alt="menu-toggle" />
+            </button>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-2 search-col">
+        <img class="search" src="../pics/search.png" alt="search" />
+        <input type="text" class="search-form" placeholder="Search..." />
+      </div>
+
+      <div class="col-md-3 col-sm-4">
+        <div class="top-right">
+          <div class="notif">
+            <img src="../pics/notification.png" alt="notification" /><span
+              class="bell-dot"
+            ></span>
+          </div>
+          <div class="user-image">
+            <img src="../pics/david.png" alt="david" />
+          </div>
+          <div class="user-name">
+            <span class="user">David Miller</span>
+            <span class="position"
+              >Admission Staff
+              <span
+                ><img src="../pics/david-down-arrow.png" alt="down-arrow"
+              /></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------- Second row ------------------------->
+    <div class="row second-row">
+      <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/dasboard.png"
+                  alt="dasboard"
+                />
+                <span class="item-name">Dashboard</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#" id="sidebarCollapse2">
+                <span id="icon-active">
+                  <img
+                    class="image-icons"
+                    src="../pics/enquiries.png"
+                    alt="enquiries"
+                  />
+                </span>
+
+                <span class="item-name">Enquiries</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enrollment.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Enrollment</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/admission.png"
+                  alt="admission"
+                />
+                <span class="item-name">Admission</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/settings.png"
+                  alt="settings"
+                />
+                <span class="item-name">Settings</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img class="image-icons" src="../pics/help.png" alt="help" />
+                <span class="item-name">Help</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav id="sidebar2" class="toggled">
+          <h2 class="management">Enquiries Management</h2>
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enquiry-list.png"
+                  alt="enquiries"
+                />
+                <span class="item-name">Enquiry List</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/feedback.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Manage Feedback</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/group.png"
+                  alt="admission"
+                />
+                <span class="item-name">Manage Groups</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+          <h3 class="mb-3 dashboard-enquiry">
+            Dashboard / Enquiry List / Create Enquiry
+          </h3>
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-3 dashboard-heading">Create Enquiry</h3>
+            </div>
+          </div>
+          <!-- <div class="row main-table-row"> -->
+          <div class="col-md-12">
+            <div class="row bg-white">
+              <div class="col table-coloumn">
+                <!-- Nav tabs -->
+                <div class="row nav-tab-row">
+                  <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        data-toggle="pill"
+                        href="#first-active"
+                        >Use Enquiry Form</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#menu1"
+                        >Bulk Upload</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="tab-content">
+                  <div id="first-active" class="container tab-pane active">
+                    <div class="row main-row">
+                      <div class="col-md-8 column-1">
+                        <div class="row academic-year">
+                          <div class="col">
+                            <label for="" class="label-fs">Academic Year</label>
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>2020 - 2021</option>
+                                <option>2019 - 2020</option>
+                                <option>2018 - 2019</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- *************************** Parent details **********************************  -->
+                        <div class="row parent-details">
+                          <div class="col-12">
+                            <h3 class="h3-fs">Parent Details</h3>
+                          </div>
+                        </div>
+                        <div class="row parent-detail-1">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">First Name</label>
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="First Name Goes Here"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Last Name</label>
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="Last Name Goes Here"
+                            />
+                          </div>
+                        </div>
+                        <div class="row parent-detail-2">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >Relationship with Student</label
+                            >
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>Mother</option>
+                                <option>Father</option>
+                                <option>Guardian</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >Existing Parent</label
+                            >
+                            <br />
+
+                            <div
+                              class="custom-control custom-radio custom-control-inline"
+                            >
+                              <input
+                                type="radio"
+                                class="custom-control-input input-fs"
+                                id="customRadio1"
+                                name="example1"
+                              />
+                              <label
+                                class="custom-control-label label-fs"
+                                for="customRadio1"
+                                >Yes</label
+                              >
+                            </div>
+                            <div
+                              class="custom-control custom-radio custom-control-inline"
+                            >
+                              <input
+                                type="radio"
+                                class="custom-control-input input-fs"
+                                id="customRadio2"
+                                name="example1"
+                              />
+                              <label
+                                class="custom-control-label label-fs"
+                                for="customRadio2"
+                                >No</label
+                              >
+                            </div>
+
+                            <!-- </div> -->
+                          </div>
+                        </div>
+                        <div class="row parent-detail-3">
+                          <div class="col-md-6 with-flag">
+                            <label for="" class="label-fs"
+                              >Primary Contact</label
+                            >
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="561 XXX XXX"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Email ID</label>
+                            <br />
+                            <input
+                              type="email"
+                              class="input-fs"
+                              placeholder="Email Id Goes Here"
+                            />
+                          </div>
+                        </div>
+                        <div class="row parent-detail-4">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >Contact Preference</label
+                            >
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>By phone</option>
+                                <option>By Email</option>
+                                <option>By Text Message</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6"></div>
+                        </div>
+                        <button class="add-parent">
+                          <span
+                            ><img src="../pics/add-parent.png" alt="add-parent"
+                          /></span>
+                          <span>Add Parent</span>
+                        </button>
+                        <!-- *************************** school details **********************************  -->
+                        <div class="row school-detils">
+                          <div class="col-12">
+                            <h3 class="h3-fs">School Preferences</h3>
+                          </div>
+                        </div>
+                        <div class="row school-detail-1">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >School Location Preference</label
+                            >
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="Location"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >School Board Preference</label
+                            >
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>CBSE</option>
+                                <option>ICSE</option>
+                                <option>State Board</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row school-detail-2">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >Grade Seeking Admission to (Optional)</label
+                            >
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>Grade 5</option>
+                                <option>Grade 6</option>
+                                <option>Grade 7</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Interest Area</label>
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>Academic</option>
+                                <option>Sports</option>
+                                <option>Extra-curricular</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row school-detail-3">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >Enquiry Source</label
+                            >
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>Direct Walk In</option>
+                                <option>Phone</option>
+                                <option>Others</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6"></div>
+                        </div>
+                        <div class="row school-detail-4">
+                          <div class="col-12">
+                            <label for="name" class="label-fs"
+                              >Additional Notes (Optional)</label
+                            >
+                            <br />
+
+                            <textarea
+                              name="paragraph_text"
+                              placeholder="Note Goes Here"
+                              cols="70"
+                              rows="4"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <!-- *************************** child details **********************************  -->
+                        <div class="row child-details">
+                          <div class="col-12">
+                            <h3 class="h3-fs">Child Information (Option)</h3>
+                          </div>
+                        </div>
+                        <div class="row child-detail-1">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">First Name</label>
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="First Name Goes Here"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Last Name</label>
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="Last Name Goes Here"
+                            />
+                          </div>
+                        </div>
+                        <div class="row child-detail-2">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Date of Birth</label>
+                            <br />
+                            <input type="date" class="input-fs" />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Gender</label>
+                            <br />
+                            <div
+                              class="custom-control custom-radio custom-control-inline"
+                            >
+                              <input
+                                type="radio"
+                                class="custom-control-input input-fs"
+                                id="customRadio3"
+                                name="example2"
+                              />
+                              <label
+                                class="custom-control-label label-fs"
+                                for="customRadio3"
+                                >Male</label
+                              >
+                            </div>
+                            <div
+                              class="custom-control custom-radio custom-control-inline"
+                            >
+                              <input
+                                type="radio"
+                                class="custom-control-input input-fs"
+                                id="customRadio4"
+                                name="example2"
+                              />
+                              <label
+                                class="custom-control-label label-fs"
+                                for="customRadio4"
+                                >Female</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row child-detail-3">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs">Nationality</label>
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="Nationality Goes Here"
+                            />
+                          </div>
+                          <div class="col-md-6 with-flag">
+                            <label for="" class="label-fs"
+                              >Primary Contact</label
+                            >
+                            <br />
+                            <input
+                              type="text"
+                              class="input-fs"
+                              placeholder="561 XXX XXX"
+                            />
+                          </div>
+                        </div>
+                        <div class="row child-detail-4">
+                          <div class="col-md-6">
+                            <label for="" class="label-fs"
+                              >Current School</label
+                            >
+                            <br />
+                            <div class="wrap">
+                              <select class="custom-select">
+                                <option>Select</option>
+                                <option>ABC</option>
+                                <option>XYZ</option>
+                                <option>Others</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6"></div>
+                        </div>
+                        <div class="row child-detail-5">
+                          <div class="col-12">
+                            <label for="" class="label-fs"
+                              >Reason for School transfer</label
+                            >
+                            <br />
+                            <textarea
+                              name="paragraph_text"
+                              placeholder="Note Goes Here"
+                              cols="70"
+                              rows="4"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="row child-detail-6">
+                          <div class="col-12">
+                            <label for="" class="label-fs"
+                              >Support Documents
+                              <span
+                                >(Upload only pdf, jpeg. Should not exceeds
+                                2MB)</span
+                              ></label
+                            >
+                            <br />
+                            <div class="drag-area">
+                              <div class="icon">
+                                <img
+                                  src="../pics/file-upload.png"
+                                  alt="file-upload"
+                                />
+                              </div>
+                              <button>
+                                Choose a file<span>or drag it here.</span>
+                              </button>
+
+                              <input type="file" hidden />
+                            </div>
+                          </div>
+                        </div>
+                        <button class="add-parent-1">
+                          <span
+                            ><img src="../pics/add-parent.png" alt="add-parent"
+                          /></span>
+                          <span>Add Parent</span>
+                        </button>
+                      </div>
+                      <div class="col-md-4 column-2">
+                        <div class="progress-indicator">
+                          <div class="row">
+                            <span class="outer-ring"
+                              ><span class="inner-ring"></span
+                            ></span>
+                            <h5 class="progress-info-1">Parent Information</h5>
+                          </div>
+                          <div class="dotted-vertical"></div>
+                          <div class="row row-margin">
+                            <span class="outer-ring"
+                              ><span class="inner-ring"></span
+                            ></span>
+                            <h5 class="progress-info-2">School Preferences</h5>
+                          </div>
+                          <div class="solid-vertical"></div>
+                          <div class="row row-margin">
+                            <span class="outer-ring"
+                              ><span class="inner-ring"></span
+                            ></span>
+                            <h5 class="progress-info-2">
+                              Child Information (Option)
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row button-row">
+                      <button class="cancel">Cancel</button>
+                      <button class="save">Save Enquiry Details</button>
+                    </div>
+                  </div>
+                  <div id="menu1" class="container tab-pane fade">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fusce porttitor leo nec ligula viverra, quis facilisis nunc
+                    vehicula. Maecenas purus orci, efficitur in dapibus vel,
+                    rutrum in massa. Sed auctor urna sit amet eros mattis
+                    interdum. Integer imperdiet ante in quam lacinia, a laoreet
+                    risus imperdiet. Ut a blandit elit, vitae volutpat nunc. Nam
+                    posuere urna sagittis lectus eleifend viverra. Quisque
+                    mauris nunc, viverra vitae sodales non, auctor in diam. Sed
+                    dignissim pulvinar sapien sed fermentum. Praesent interdum
+                    turpis ut neque tristique ornare. Nam dictum est sed sem
+                    elementum rutrum. Nam a mollis turpis. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia
+                    curae; Pellentesque habitant morbi tristique senectus et
+                    netus et malesuada fames ac turpis egestas. Aliquam tempus
+                    ac est convallis accumsan. Donec rhoncus condimentum leo nec
+                    cursus. Fusce a ornare nisl, id fermentum sem. Praesent
+                    pretium dui magna, in aliquam lectus tempor sed. Donec
+                    maximus lectus quis vehicula gravida. Proin odio nisi,
+                    aliquet ac ipsum quis, auctor semper leo. Curabitur vitae
+                    justo vel augue varius cursus non quis est. Nunc vulputate
+                    nunc nibh, sed tempus erat tincidunt eget. Duis a lacus at
+                    nulla porttitor tincidunt. Vestibulum euismod elementum mi
+                    ut tincidunt. Suspendisse tempus, mi et imperdiet maximus,
+                    est turpis placerat massa, at venenatis sem elit ut ex.
+                    Donec non aliquam odio. Curabitur ut leo vitae magna
+                    lobortis accumsan. Phasellus viverra eu leo non rhoncus.
+                    Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id
+                    arcu tempus, varius erat et, ornare libero. In quis felis
+                    nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem
+                    mattis. Cras non varius dui, quis commodo ante. Maecenas
+                    gravida est non nulla malesuada egestas. Proin tincidunt
+                    eros et lacus sodales lobortis.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+          <footer>
+            <div class="row footer-row">
+              © 2021. <span>GEMS.</span> All Rights Reserved.
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="choose-file.js"></script>
+  </body>
+</html>

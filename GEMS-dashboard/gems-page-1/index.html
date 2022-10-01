@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GEMS</title>
+  </head>
+  <body>
+    <!-------------- First row ------------------------->
+    <div class="row first-row">
+      <div class="col-md-2 col-sm-6">
+        <div class="top-left d-flex align-items-center">
+          <span class="logo">
+            <img src="../pics/logo.png" src="company-logo"
+          /></span>
+          <span class="logo-down"
+            ><img src="../pics/logo-down-arrow.png" alt="down-arrow"
+          /></span>
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <img src="../pics/fries-menu.png" alt="menu-toggle" />
+            </button>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-2 search-col">
+        <img class="search" src="../pics/search.png" alt="search" />
+        <input type="text" class="search-form" placeholder="Search..." />
+      </div>
+
+      <div class="col-md-3 col-sm-4">
+        <div class="top-right">
+          <div class="notif">
+            <img src="../pics/notification.png" alt="notification" /><span
+              class="bell-dot"
+            ></span>
+          </div>
+          <div class="user-image">
+            <img src="../pics/david.png" alt="david" />
+          </div>
+          <div class="user-name">
+            <span class="user">David Miller</span>
+            <span class="position"
+              >Admission Staff
+              <span
+                ><img src="../pics/david-down-arrow.png" alt="down-arrow"
+              /></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------- Second row ------------------------->
+    <div class="row second-row">
+      <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+          <ul class="sidebar-menu">
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/dasboard.png"
+                  alt="dasboard"
+                />
+                <span class="item-name">Dashboard</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enquiries.png"
+                  alt="enquiries"
+                />
+                <span class="item-name">Enquiries</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/enrollment.png"
+                  alt="enrollment"
+                />
+                <span class="item-name">Enrollment</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/admission.png"
+                  alt="admission"
+                />
+                <span class="item-name">Admission</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img
+                  class="image-icons"
+                  src="../pics/settings.png"
+                  alt="settings"
+                />
+                <span class="item-name">Settings</span>
+              </a>
+            </li>
+            <li class="no-children">
+              <a href="#">
+                <img class="image-icons" src="../pics/help.png" alt="help" />
+                <span class="item-name">Help</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+          <div class="row">
+            <div class="col-md-8 col-sm-6">
+              <h3 class="mb-3 dashboard-heading">Dashboard</h3>
+            </div>
+            <div class="col-md-4 col-sm-6 login">
+              <span class="login-desc">Last Login 23, Aug, 03PM</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="row main-content-row">
+                <div class="card">
+                  <span class="round-1"
+                    ><img src="../pics/total-enquiry.png" class="card-img-left"
+                  /></span>
+                  <div class="card-body">
+                    <p class="card-title">Total Enquiries</p>
+                    <p class="card-text">267</p>
+                  </div>
+                </div>
+                <div class="card card-2">
+                  <span class="round-1"
+                    ><img src="../pics/open.png" class="card-img-left"
+                  /></span>
+                  <div class="card-body">
+                    <p class="card-title">Open</p>
+                    <p class="card-text">135</p>
+                  </div>
+                </div>
+                <div class="card card-2">
+                  <span class="round-1"
+                    ><img src="../pics/re-open.png" class="card-img-left"
+                  /></span>
+                  <div class="card-body">
+                    <p class="card-title">Re-Open</p>
+                    <p class="card-text">87</p>
+                  </div>
+                </div>
+                <div class="card card-2">
+                  <span class="round-1"
+                    ><img src="../pics/closed.png" class="card-img-left"
+                  /></span>
+                  <div class="card-body">
+                    <p class="card-title">Closed</p>
+                    <p class="card-text">45</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col chart-col">
+                <div class="conversion">
+                  <h6>Enquiries Conversion Rate</h6>
+                  <img src="../pics/three-dots.png" alt="three-dots" />
+                </div>
+                <div class="last-6">Last 6 Months</div>
+                <img
+                  class="line-chart"
+                  src="../pics/enquiry-chart.png"
+                  alt="chart"
+                />
+                <div class="row chart-marker-row">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>184</h5>
+                      <h6 class="enroll">Interested to Enroll</h6>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>146</h5>
+                      <h6 class="inprogress">Followup Inprogress</h6>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>78</h5>
+
+                      <h6 class="lead">Dead Lead</h6>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>64</h5>
+
+                      <h6 class="response">No Response</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row table-row">
+                <div class="col table-coloumn">
+                  <div class="row table-header-row">
+                    <h5 class="schedule">Schedules</h5>
+                    <div class="table-rigt-sec">
+                      <span class="followup"
+                        >Follow-ups <span class="value">03</span></span
+                      >
+                      <span class="followup2"
+                        >Virtual Tour<span class="value">02</span></span
+                      >
+                      <img
+                        class="three-dots"
+                        src="../pics/three-dots.png"
+                        alt="three-dots"
+                      />
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table bg-white align-middle enquiry-table">
+                      <tr>
+                        <th>
+                          Enquiry ID
+                          <span class="up-down"
+                            ><img src="../pics/up-down.png" alt="up-down-arrow"
+                          /></span>
+                        </th>
+                        <th>
+                          Name
+                          <span class="up-down"
+                            ><img src="../pics/up-down.png" alt="up-down-arrow"
+                          /></span>
+                        </th>
+                        <th>Source</th>
+                        <th>Lead Status</th>
+                        <th>Follow up Status</th>
+                      </tr>
+                      <tr>
+                        <td class="id">EN0122072021</td>
+                        <td class="detail">Abdhul</td>
+                        <td class="detail">Email</td>
+                        <td class="followup3">
+                          <span>Follow-up Inprogress</span>
+                        </td>
+                        <td class="status">
+                          <span class="dot1"></span
+                          ><span class="active">Active</span>
+                          <span class="today">
+                            <img class="call" src="../pics/call.png" />Scheduled
+                            Today</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="id">EN0122072021</td>
+                        <td class="detail">Irshad</td>
+                        <td class="detail">Online</td>
+                        <td class="followup3">
+                          <span>Follow-up Inprogress</span>
+                        </td>
+                        <td class="status">
+                          <span class="dot1"></span
+                          ><span class="active">Active</span>
+                          <span class="today">
+                            <img
+                              class="call"
+                              src="../pics/warning.png"
+                            />Brochure not delivered</span
+                          >
+                        </td>
+                      </tr>
+                      <tr class="inactive-row">
+                        <td class="id">EN0122072021</td>
+                        <td class="detail">Alimullah</td>
+                        <td class="detail">Website</td>
+                        <td class="followup3">
+                          <span>Follow-up Inprogress</span>
+                        </td>
+                        <td class="status">
+                          <span class="dot1"></span
+                          ><span class="active">Inactive</span>
+                          <span class="today">
+                            <img
+                              class="call"
+                              src="../pics/inactive.png"
+                            />Cancelled the appointment</span
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 right-col">
+              <div class="col pie-col">
+                <div class="enquiries">
+                  <h6>Enquiries By Status</h6>
+                  <img src="../pics/three-dots.png" alt="three-dots" />
+                </div>
+                <div class="last-6">Last 6 Months</div>
+                <img
+                  class="pie-chart"
+                  src="../pics/pie-chart.png"
+                  alt="chart"
+                />
+                <div class="marker-row">
+                  <hr class="assigned" />
+                  <h6>Assigned</h6>
+                  <hr class="opened" />
+                  <h6>Opened</h6>
+                  <hr class="closed" />
+                  <h6>Closed</h6>
+                </div>
+                <div class="percentage-row">
+                  <h6>20%</h6>
+                  <h6>40%</h6>
+                  <h6>56%</h6>
+                </div>
+              </div>
+
+              <div class="col calendar-col">
+                <div class="table-responsive">
+                  <table
+                    class="table align-middle table-borderless calendar-table"
+                    cellspacing="13"
+                    cellpadding="14"
+                  >
+                    <caption class="caption-top">
+                      <span class="caption-left">Calender</span>
+                      <span class="caption-right"> Aug 2021</span>
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>S</th>
+                        <th>M</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>T</th>
+                        <th>F</th>
+                        <th>S</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr></tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td><span class="green-round"></span> 15</td>
+                        <td>16</td>
+                        <td><span class="select-round">17</span></td>
+                        <td>18</td>
+                        <td>19</td>
+                      </tr>
+                      <tr>
+                        <td><span class="green-round"></span>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td><span class="green-round"></span>24</td>
+                        <td><span class="blue-round"></span>25</td>
+                        <td>26</td>
+                      </tr>
+                      <tr class="last-row">
+                        <td><span class="blue-round"></span>27</td>
+                        <td>28</td>
+                        <td><span class="blue-round"></span>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td class="muted">1</td>
+                        <td class="muted">2</td>
+                      </tr>
+                    </tbody>
+                    <caption class="caption-bottom">
+                      <span class="follow-round"
+                        ><img src="../pics/follow-up.png" alt="follow-up"
+                      /></span>
+                      <span> Follow-up </span>
+                      <span class="virtual-round"
+                        ><img src="../pics/virtual-tour.png" alt="virtual-tour"
+                      /></span>
+                      <span> Virtual Tour </span>
+                    </caption>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer>
+            <div class="row">
+              © 2021. <span>GEMS.</span> All Rights Reserved.
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
